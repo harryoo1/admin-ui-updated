@@ -1,0 +1,76 @@
+.component-body-container {
+    padding: 20px;
+}
+
+.custom-btn-form {
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+    text-transform: uppercase;
+    width: 150px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+
+.add-btn {
+    background: #7ab97a;
+    color: #fff;
+}
+
+.back-btn {
+    background: #e7e7e7;
+    color: #000;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 1px solid #c7c7c7;
+}
+
+.subscriber-form {
+    border: 1px solid #e2e2e2;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+.label-control {
+    color: #808080;
+    font-size: 1.15rem;
+    margin-right: 15px;
+}
+
+.input-control {
+    width: 100%;
+    min-width: 100px;
+    padding: 10px 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.subscriber-info-container {
+    font-size: 1rem;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.subscriber-to-add-heading {
+    color: #0a4f75;
+    font-weight: 600;
+}
+
+.subscriber-info {
+    color: #808080;
+}
+
+.custom-add-btn {
+    width: 100%;
+}
