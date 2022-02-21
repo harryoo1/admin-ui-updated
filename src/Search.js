@@ -21,7 +21,7 @@ export default function Search() {
     return (
         <div className='container'>
         <form className="search-form">
-            <input id="search" type="text" className="input-control" name="search" onChange={inputChangedHandler}/><br/>
+            <input id="search" type="text" className="input-control" name="search" onChange={inputChangedHandler} placeholder="Search"/><br/>
             {/* {
                 searchQuery.map((item)=>(
                     <div key={item.id} className="search-container">

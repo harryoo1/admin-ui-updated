@@ -8,6 +8,7 @@ import Search from './Search';
 import Pagination from './Pagination';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { borderRight, padding } from "@mui/system";
 
 let PageSize = 10;
 
@@ -46,18 +47,19 @@ export default function Ui({selectSubscriberHandler, sortHandlerDescending, sort
         <div>
             <div className="component-body-container">
                 <Search />
-            <div className="grid-container heading-container">
-            <span className="grid-item checkBox-heading">
-                <button className="custom-btn" onChange={checkAll} onClick={() => selectAllSubscriberHandler()}>
-                <input type="checkbox" id="selectAll" name="selectAll" className="selectAll-check"/>
-                </button>
-            </span>
-            <span className="grid-item name-heading">Name <ArrowDropUpIcon onClick={() => sortHandlerDescending("name")}/><ArrowDropDownIcon onClick={() => sortHandlerAscending("name")}/></span>
-            <span className="grid-item email-heading">Email <ArrowDropUpIcon onClick={() => sortHandlerDescending("email")}/><ArrowDropDownIcon onClick={() => sortHandlerAscending("name")}/></span>
-            <span className="grid-item role-heading">Role <ArrowDropUpIcon onClick={() => sortHandlerDescending("role")}/><ArrowDropDownIcon onClick={() => sortHandlerAscending("name")}/></span>
-            <span className="grid-item actions-heading">Actions</span>
-            </div>
-            {
+            <div style={{borderLeft : '1px solid #d9d9d9', borderRight : '1px solid #d9d9d9', padding: '0px 40px'}}>
+                <div className="grid-container heading-container">
+                <span className="grid-item checkBox-heading">
+                    <button className="custom-btn" onChange={checkAll} onClick={() => selectAllSubscriberHandler()}>
+                    <input type="checkbox" id="selectAll" name="selectAll" className="selectAll-check"/>
+                    </button>
+                </span>
+                <span className="grid-item name-heading">Name <ArrowDropUpIcon onClick={() => sortHandlerDescending("name")}/><ArrowDropDownIcon onClick={() => sortHandlerAscending("name")}/></span>
+                <span className="grid-item email-heading">Email <ArrowDropUpIcon onClick={() => sortHandlerDescending("email")}/><ArrowDropDownIcon onClick={() => sortHandlerAscending("name")}/></span>
+                <span className="grid-item role-heading">Role <ArrowDropUpIcon onClick={() => sortHandlerDescending("role")}/><ArrowDropDownIcon onClick={() => sortHandlerAscending("name")}/></span>
+                <span className="grid-item actions-heading">Actions</span>
+                </div>
+                {
                 filteredList.map(user => {
                     return <div key={user.id} className="grid-container">
                         <span className="grid-item">
@@ -76,15 +78,16 @@ export default function Ui({selectSubscriberHandler, sortHandlerDescending, sort
                         </span>
                     </div>
                 })
-            }
-            {/* <Pagination
-                className="pagination-bar"
-                currentPage={currentPage}
-                totalCount={usersList.length}
-                pageSize={PageSize}
-                onPageChange={page => setCurrentPage(page)}
-            /> */}
-            <button className="custom-btn delete-selected-btn" onClick={() => deleteSelectedHandler()}>Delete Selected</button>
+                }
+                {/* <Pagination
+                    className="pagination-bar"
+                    currentPage={currentPage}
+                    totalCount={usersList.length}
+                    pageSize={PageSize}
+                    onPageChange={page => setCurrentPage(page)}
+                /> */}
+                <button className="custom-btn delete-selected-btn" onClick={() => deleteSelectedHandler()}>Delete Selected</button>
+            </div>
             </div>
         </div>
     );
